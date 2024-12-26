@@ -1,0 +1,4 @@
+Car;Toyota Camry;3;150;Бензиновый
+Car;Tesla Model 3;1;200;Электрический
+Motorcycle;Yamaha R1;2;500;Спортивный
+Motorcycle;Harley Davidson;3;120;Чоппер

@@ -1,0 +1,46 @@
+﻿<Window x:Class="ООП_Курсовая.VehicleWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Транспорт" Height="600" Width="800">
+    <Grid>
+        <TabControl Margin="10">
+            <!-- Вкладка для автомобилей -->
+            <TabItem Header="Автомобили">
+                <Grid>
+                    <DataGrid x:Name="CarDataGrid" AutoGenerateColumns="False" Margin="10" CanUserAddRows="False" IsReadOnly="False">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Модель" Binding="{Binding Model}" Width="200" />
+                            <DataGridTextColumn Header="Уровень загрязнения" Binding="{Binding PollutionDegree}" Width="200" />
+                            <DataGridTextColumn Header="Цена" Binding="{Binding Price}" Width="200" />
+                            <DataGridTextColumn Header="Тип двигателя" Binding="{Binding EngineType}" Width="200" />
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="10">
+                        <Button Content="Добавить" Click="AddCar_Click" Margin="5" />
+                        <Button Content="Редактировать" Click="EditCar_Click" Margin="5" />
+                        <Button Content="Удалить" Click="DeleteCar_Click" Margin="5" />
+                    </StackPanel>
+                </Grid>
+            </TabItem>
+
+            <!-- Вкладка для мотоциклов -->
+            <TabItem Header="Мотоциклы">
+                <Grid>
+                    <DataGrid x:Name="MotorcycleDataGrid" AutoGenerateColumns="False" Margin="10" CanUserAddRows="False" IsReadOnly="False">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Модель" Binding="{Binding Model}" Width="200" />
+                            <DataGridTextColumn Header="Уровень загрязнения" Binding="{Binding PollutionDegree}" Width="200" />
+                            <DataGridTextColumn Header="Цена" Binding="{Binding Price}" Width="200" />
+                            <DataGridTextColumn Header="Тип мотоцикла" Binding="{Binding MotorcycleType}" Width="200" />
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="10">
+                        <Button Content="Добавить" Click="AddMotorcycle_Click" Margin="5" />
+                        <Button Content="Редактировать" Click="EditMotorcycle_Click" Margin="5" />
+                        <Button Content="Удалить" Click="DeleteMotorcycle_Click" Margin="5" />
+                    </StackPanel>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
